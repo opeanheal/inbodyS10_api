@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UFT-8">
+  <title>Load</title>
+</head>
+<body>
+  <div style="text-align: center;">
+    <style>
+      /* Estilos para o formulário */
+      form {
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+      }
+    
+      /* Estilos para os campos do formulário */
+      form label,
+      form input,
+      form textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    
+      form input[type="text"]{
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0 10px;
+        font-size: 14px;
+      }
+    
+      form textarea {
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 14px;
+      }
+    
+      /* Estilos para o botão de submit */
+      form input[type="submit"] {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for ="name">Name</label>
+    <input type = "text" id = "name" name = "name"><br>
+    <label for = "indexes">Indexes</label>
+    <input type = "text" id ="indexes" name = "indexes"><br>
+    <label for="csv-file">Select a CSV file:</label><br>
+    <input type="file" id="csv-file" name="csv-file" accept=".csv">
+    <input type="submit" value="Upload">
+  </form>
+  </div>
+</body>
+</html>
+
+  

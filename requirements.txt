@@ -1,0 +1,9 @@
+pillow
+pandas
+numpy
+ipykernel
+waitress
+flask
+load-dotenv
+xlwt
+python-dotenv 
