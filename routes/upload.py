@@ -20,7 +20,7 @@ def upload_file():
 
     pdf = make_report(
         filename = file,
-        name = request.form.get("name"),
+        name = request.form.get("name").upper(),
         indexes = request.form.get("indexes"))
 
     return send_file(pdf,"report.pdf", as_attachment=True, download_name="report.pdf")
