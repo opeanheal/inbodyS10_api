@@ -6,4 +6,4 @@ waitress
 flask
 load-dotenv
 xlwt
-python-dotenv 
+python-dotenv
