@@ -6,7 +6,7 @@ class Bio:
     self.ID= params["2.ID"]
     self.AGE= params["3.AGE"]
     self.HEIGHT= params["4.HEIGHT"]
-    self.SEX= params["5.SEX"]
+    self.SEX= params.get("5.SEX",params.get("5.GENDER"))
     self.WEIGHT= params["6.WEIGHT"]
     self.WEIGHT_MIN= params["7.WEIGHT_MIN"]
     self.WEIGHT_MAX= params["8.WEIGHT_MAX"]
