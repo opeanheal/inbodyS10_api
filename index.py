@@ -3,8 +3,10 @@ from flask import Flask
 from waitress import serve
 from routes.upload import upload
 from routes.load import load
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder="templates")
+CORS(app)
 
 @app.get("/")
 def index():

@@ -12,6 +12,7 @@ waitress = "*"
 flask = "*"
 load-dotenv = "*"
 xlwt = "*"
+flask-cors = "*"
 
 [dev-packages]
 ipykernel = "*"
