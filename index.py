@@ -2,7 +2,6 @@ from shared import env
 from flask import Flask
 from waitress import serve
 from routes.upload import upload
-from routes.load import load
 from flask_cors import CORS
 
 app = Flask(__name__, template_folder="templates")
@@ -16,7 +15,6 @@ def index():
     }
 
 app.register_blueprint(upload)
-app.register_blueprint(load)
 
 
 if __name__ == '__main__':
