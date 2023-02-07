@@ -8,3 +8,5 @@ load-dotenv
 xlwt
 python-dotenv
 flask-cors
+matplotlib
+seaborn

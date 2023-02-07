@@ -12,6 +12,7 @@ class BaseReportBio:
 
         # pt is an object of class Patient and i is Index of Bio
         def __init__(self, pt, i, language='pt'):
+                self.pt = pt
                 self.name = str(pt.name)
                 self.id = str(pt.bios[i].ID)
                 self.heigth = str(pt.bios[i].HEIGHT)
