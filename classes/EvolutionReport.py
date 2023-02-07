@@ -12,7 +12,7 @@ class EvolutionReport():
     def get_evolution(self):
         df_array = [self.get_weights(), self.get_fat_mass(), self.get_lean_mass()]
         x_label_array = ["date", "date", "date"]
-        y_label_array = ["weight", "fat_mass", "lean_mass"]
+        y_label_array = ["Peso", "Gordura", "Músculo"]
         return self.plot_images(df_array, x_label_array, y_label_array)
 
     def plot_sns(self, df_array, x_label_array, y_label_array):
@@ -26,6 +26,7 @@ class EvolutionReport():
                 )
             for i, point in df.iterrows():
                 ax.text(point[x_label], point[y_label], str(point[y_label]), fontsize=10)
+                ax.grid(True, color='gray', linestyle='--', alpha=0.5)
 
             # plt.xlabel("Date")
             # plt.ylabel("Kg")
@@ -61,7 +62,7 @@ class EvolutionReport():
         weights = [(bio.DATE_TIMES, bio.WEIGHT) for bio in self.pt.bios]
         dict = {k:v for (k,v) in weights}
         df = self.get_df_from(dict)
-        df.rename(columns={0: "weight"}, inplace=True)
+        df.rename(columns={0: "Peso"}, inplace=True)
         # print(df)
         # img = self.plot_image(df, "date_time", "weight", "Evolução")
         return df
@@ -71,7 +72,7 @@ class EvolutionReport():
         fat_mass = [(bio.DATE_TIMES, bio.Fat) for bio in self.pt.bios]
         dict = {k:v for (k,v) in fat_mass}
         df = self.get_df_from(dict)
-        df.rename(columns={0: "fat_mass"}, inplace=True)
+        df.rename(columns={0: "Gordura"}, inplace=True)
         # print(df)
         # img = self.plot_image(df, "date_time", "fat_mass", "Evolução")
         return df
@@ -81,7 +82,7 @@ class EvolutionReport():
         lean_mass = [(bio.DATE_TIMES, bio.SMM_Skeletal_Muscle_Mass_) for bio in self.pt.bios]
         dict = {k:v for (k,v) in lean_mass}
         df = self.get_df_from(dict)
-        df.rename(columns={0: "lean_mass"}, inplace=True)
+        df.rename(columns={0: "Músculo"}, inplace=True)
         # print(df)
         return df
 
@@ -96,7 +97,7 @@ class EvolutionReport():
     def get_images(self):
         df_array = [self.get_weights(), self.get_fat_mass(), self.get_lean_mass()]
         x_label_array = ["date", "date", "date"]
-        y_label_array = ["Peso", "Gordura", "Musculo"]
+        y_label_array = ["Peso", "Gordura", "Músculo"]
         return self.plot_images(df_array, x_label_array, y_label_array)
 
     
