@@ -163,10 +163,10 @@ class BaseReportBio:
 
         def get_color(self, str):
                 rgb = {
-                'red': (255, 0, 0),
-                'blue': (0, 0, 255),
-                'green': (0, 255, 0),
-                'black': (17, 12, 9, 255)}
+                'red': (196, 21, 28),
+                'blue': (18, 10, 143),
+                'green': (0, 100, 0),
+                'black': (0, 0, 0)}
 
                 options = {
                 'std': rgb['black'],

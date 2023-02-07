@@ -11,8 +11,8 @@ def merge_in_pdf(patient, count):
     images = []
     for index in range(count):
         report = ReportBioStandard(patient, index)
-        images.append(report.show((1000, 2000)))
-    images.append(ER(patient).get_weights())
+        images.append(report.show((1471, 1984)))
+    images.append(ER(patient).get_evolution())
     image = images.pop(0)
     obj = io.BytesIO() 
     image.save(
