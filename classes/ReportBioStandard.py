@@ -3,6 +3,7 @@ from classes.Utils import Utils
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+from classes.EvolutionReport import EvolutionReport as ER
 
 class ReportBioStandard(BaseReportBio):
         
@@ -298,5 +299,5 @@ class ReportBioStandard(BaseReportBio):
                         font=font_txt, fill=self.get_color('std'))
                 I1.text((column_txt[0], lines_txt[33]), texts[33],
                         font=font_txt, fill=self.get_color('std'))
-                # I1.text((column_txt[0],lines_txt[34]), texts[34] , font = font_txt, fill = self.get_color('std'))
+                #I1.text((column_txt[0],lines_txt[34]), ER(self.pt).get_weights() , font = font_txt, fill = self.get_color('std'))
                 return img

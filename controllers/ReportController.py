@@ -5,12 +5,14 @@ from classes.Bio import Bio
 from classes.BioData import BioData
 from classes.ReportBioStandard import ReportBioStandard
 import io
+from classes.EvolutionReport import EvolutionReport as ER
 
 def merge_in_pdf(patient, count):
     images = []
     for index in range(count):
         report = ReportBioStandard(patient, index)
         images.append(report.show((1000, 2000)))
+    images.append(ER(patient).get_weights())
     image = images.pop(0)
     obj = io.BytesIO() 
     image.save(
@@ -21,6 +23,10 @@ def merge_in_pdf(patient, count):
         append_images = images
     )
     obj.seek(0)
+
+    
+
+
     return obj
 
 
