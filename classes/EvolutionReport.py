@@ -34,7 +34,7 @@ class EvolutionReport():
 
     def plot_images(self, df_array, x_label_array, y_label_array):
         plt.switch_backend('Agg')
-        plt.figure(figsize=(10, 15))
+        plt.figure(figsize=(8.27, 11.69))
         plt.title("Evolução")
         plt.xticks(rotation=90)
         # sns.set_theme(style="darkgrid")
